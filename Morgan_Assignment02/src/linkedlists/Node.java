@@ -23,4 +23,8 @@ public class Node {
         this.isGradOrNot = isGradOrNot;
         this.age = age;
     }
+    
+    public Node(){
+        
+    }
 }
