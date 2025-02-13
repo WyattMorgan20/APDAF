@@ -8,12 +8,16 @@ package linkedlists;
  *
  * @author Wyatt Morgan
  */
-public class Morgan_Assignment02 {
+public class SinglyLinkedList {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+    }
+    
+    public Node insertNode(Node head, Node new){
         
     }
     
