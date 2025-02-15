@@ -10,16 +10,20 @@ package linkedlists;
  */
 public class SinglyLinkedList {
     
+    // kept getting errors without having this here...
+    public Node head;
+    
     public Node insertNode(Node head, Node newNode){
         if(head == null){
-            return newNode;
+            this.head = newNode;
+            return this.head;
         }
         Node temp = head;
         while(temp.next != null){
             temp = temp.next;
         }
         temp.next = newNode;
-        return head;
+        return this.head;
     }
     
     public Node updateDetails(Node head, int studentID){
@@ -38,6 +42,7 @@ public class SinglyLinkedList {
     public void print(Node head){
         Node temp = head;
         System.out.println("******************************************");
+        System.out.println("Student Details are:");
         while (temp != null) {
             System.out.println("The student ID is: " + temp.std_ID);
             System.out.println("First Name: " + temp.firstName);
