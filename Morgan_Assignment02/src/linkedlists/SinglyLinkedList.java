@@ -27,12 +27,12 @@ public class SinglyLinkedList {
         while(temp != null){
             if(temp.std_ID == studentID){
                 temp.isGradOrNot = !temp.isGradOrNot;
-                return temp;
+                return head;
             }
             temp = temp.next;
         }
         
-        return null; 
+        return head; 
     }
     
     public void print(Node head){
@@ -50,7 +50,7 @@ public class SinglyLinkedList {
     }
     
     public Node swap(Node head, int stuID1, int stuID2){
-        if(stuID1 == stuID2){
+        if(head == null || stuID1 == stuID2){
             return head;
         }
         
@@ -94,9 +94,20 @@ public class SinglyLinkedList {
     }
     
     public Node merge(Node head1, Node head2){
-        if(head1.next == null){
-            head1.next = head2.head;
+        if(head1 == null){
+            return head2;
         }
+        if(head2 == null){
+            return head1;
+        }
+        
+        Node tempNode = head1;
+        while(tempNode.next != null){
+            tempNode = tempNode.next;
+        }
+        
+        tempNode.next = head2;
+        return head1;
     }
     
 }
