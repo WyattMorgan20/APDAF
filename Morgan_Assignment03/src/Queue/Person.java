@@ -7,8 +7,9 @@ package Queue;
 /**
  *
  * @author Wyatt Morgan
+ * Assignment 03 Part 2
  */
-public class Person implements Comparable {
+public class Person implements Comparable<Person> {
     
     String role;
     String name;
@@ -24,7 +25,11 @@ public class Person implements Comparable {
     
     
     @Override
-    public int compareTo(){
-        
+    public int compareTo(Person o){
+        return Integer.compare(o.priority, this.priority);
+    }
+    
+    public String toString(){
+        return "[" + role + "] " + name + " (Priority: " + priority + ") - Message: " + message;
     }
 }
